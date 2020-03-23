@@ -62,3 +62,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'webpacker', github: 'rails/webpacker'
 gem "font-awesome-sass"
+gem 'devise'
