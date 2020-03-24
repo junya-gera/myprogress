@@ -1,3 +1,10 @@
+@media screen and (max-width: 959px) {
+  .header__menu{
+    display: none;
+  }
+}
+
+
 .header {
   background-color: #f3d1f4;
   height: 65px;
@@ -21,11 +28,6 @@
     &--link:hover{
       transition: all 0.3s ease 0s;
       border-bottom: 3px solid #98d6ea;
-    }
-    &--bars{
-      // display: none;
-      margin-left: auto;
-      margin-right: 30px;
     }
   }
   .myname{

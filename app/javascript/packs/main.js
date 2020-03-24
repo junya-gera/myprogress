@@ -1,6 +1,8 @@
 import Vue from 'vue'
-import App from '../app.vue'
-import Bars from '../bars.vue'
+import App from '../components/app.vue'
+import Bars from '../components/bars.vue'
+import SideMenu from '../components/SideMenu.vue'
+
 
 Vue.config.productionTip = false;
 
@@ -15,6 +17,8 @@ Vue.config.productionTip = false;
     el: '#bars'
   })
 
-  // document.body.appendChild(app2.$el)
+  const app3 = new Vue({
+    render: h => h(SideMenu),
+    el: '#side--menu'
+  })
 
-  console.log(app2)
