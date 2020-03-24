@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="header__menu--bars">
     <i class="fas fa-bars fa-lg"></i>
   </div>
 </template>

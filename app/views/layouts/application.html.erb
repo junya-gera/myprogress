@@ -44,9 +44,9 @@
             <%= link_to "新規登録", new_user_registration_path, class: "header__menu--link" %>
           </li>
         <% end %>
-
-         <li class="header__menu" id="bars">
-        </li>
+         <div class="header__menu--bars" id="bars">
+          <bars></bars>
+        </div>
       </ul>
     </div>
     <%= yield %>

@@ -4,17 +4,17 @@ import Bars from '../bars.vue'
 
 Vue.config.productionTip = false;
 
-document.addEventListener('DOMContentLoaded', () => {
+// document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
     render: h => h(App)
   }).$mount()
   document.body.appendChild(app.$el)
 
-  new Vue({
+  const app2 = new Vue({
     render: h => h(Bars),
     el: '#bars'
   })
 
+  // document.body.appendChild(app2.$el)
 
-  console.log(app)
-})
+  console.log(app2)

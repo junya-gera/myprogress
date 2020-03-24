@@ -22,6 +22,11 @@
       transition: all 0.3s ease 0s;
       border-bottom: 3px solid #98d6ea;
     }
+    &--bars{
+      // display: none;
+      margin-left: auto;
+      margin-right: 30px;
+    }
   }
   .myname{
     margin-left: auto;
