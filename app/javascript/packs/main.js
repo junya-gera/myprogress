@@ -19,6 +19,6 @@ Vue.config.productionTip = false;
 
   const app3 = new Vue({
     render: h => h(SideMenu),
-    el: '#side--menu'
+    el: '#side-menu'
   })
 
