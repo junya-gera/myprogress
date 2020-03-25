@@ -1,24 +1,37 @@
 <template>
-  <div class="side--menu">
+  <div class="side--menu" v-bind:class="{'menu-open': open}">
     <div class="side--menu--top">
       <div class="hide-btn">
         <i class="fas fa-times fa-lg"></i>
       </div>
+
     </div>
   </div>
 </template>
 
 
 <script>
+import { BarsMenu } from "../packs/main"
 export default {
-  
+  data() {
+    return {
+      open: false // 最初は見えていないのでfalse
+    }
+  },
+  created(){
+    // created / mountedでMountEventをlistenさせて、modalを開く
+    BarsMenu.$on("openMenu", () => {
+      this.open = !this.open // openのboolean値をtrueにする
+    })
+  }
 }
 </script>
 
 <style scoped>
   .side--menu{
-    /* display: none; */
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: -33%;
     z-index: 2;
     height: 100vh;
     width: 33%;
@@ -32,5 +45,9 @@ export default {
   .hide-btn{
     text-align: right;
     margin-right: 30px;
+  }
+  .menu-open{
+    left: -33%;
+    transition: .4s;
   }
 </style>

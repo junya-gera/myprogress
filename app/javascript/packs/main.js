@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from '../components/app.vue'
 import Bars from '../components/bars.vue'
-import SideMenu from '../components/SideMenu.vue'
+import SideMenu from '../components/sideMenu.vue'
 
 
 Vue.config.productionTip = false;
@@ -14,7 +14,7 @@ Vue.config.productionTip = false;
 
   const app2 = new Vue({
     render: h => h(Bars),
-    el: '#bars'
+    // el: '#bars'
   })
 
   const app3 = new Vue({
@@ -22,3 +22,4 @@ Vue.config.productionTip = false;
     el: '#side-menu'
   })
 
+  export const BarsMenu = new Vue()

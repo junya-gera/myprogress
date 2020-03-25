@@ -1,12 +1,22 @@
 <template>
-  <div class="header__menu--bars">
-    <i class="fas fa-bars fa-lg"></i>
-  </div>
+  <!-- <div class="bars-component"> -->
+    <!-- <sideMenu menu-open="open"></sideMenu> -->
+    <div class="header__menu--bars" @click="openSideMenu">
+      <i class="fas fa-bars fa-lg"></i>
+    </div>
+  <!-- </div> -->
 </template>
 
 <script>
+import { BarsMenu } from "../packs/main"
+console.log(BarsMenu)
+
 export default {
-  
+  methods: {
+    openSideMenu: function(){
+      BarsMenu.$emit("openMenu")
+    }
+  }
 }
 </script>
 
