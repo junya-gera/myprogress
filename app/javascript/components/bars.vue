@@ -9,12 +9,11 @@
 
 <script>
 import { BarsMenu } from "../packs/main"
-console.log(BarsMenu)
 
 export default {
   methods: {
     openSideMenu: function(){
-      BarsMenu.$emit("openMenu")
+      this.$store.state.open = !this.$store.state.open
     }
   }
 }

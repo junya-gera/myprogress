@@ -11,19 +11,19 @@
 
 
 <script>
-import { BarsMenu } from "../packs/main"
+// import { BarsMenu } from "../packs/main"
 export default {
   data() {
     return {
-      open: false // 最初は見えていないのでfalse
+      open: false
     }
-  },
-  created(){
-    // created / mountedでMountEventをlistenさせて、modalを開く
-    BarsMenu.$on("openMenu", () => {
-      this.open = !this.open // openのboolean値をtrueにする
-    })
   }
+  // created(){
+  //   // created / mountedでMountEventをlistenさせて、modalを開く
+  //   BarsMenu.$on("openMenu", () => {
+  //     this.open = !this.open // openのboolean値をtrueにする
+  //   })
+  // }
 }
 </script>
 
