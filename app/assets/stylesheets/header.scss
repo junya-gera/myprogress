@@ -49,7 +49,6 @@
 }
 
 .side--menu{
-  display: none;
   position: absolute;
   top: 0;
   right: -33%;
@@ -58,6 +57,7 @@
   width: 33%;
   background-color: #f5fcc1;
   margin-left: auto;
+  transition: .4s;
 }
 .side--menu--top{
   height: 70px;
@@ -67,9 +67,8 @@
   text-align: right;
   margin-right: 30px;
 }
-.menu-open{
-  right: -33%;
-  transition: .4s;
+.header.menu-open .side--menu{
+  right: 0;
 }
 
 .header__menu--bars{

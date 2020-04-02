@@ -6,6 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -44,7 +45,7 @@
             <%= link_to "新規登録", new_user_registration_path, class: "header__menu--link" %>
           </li>
         <% end %>
-        <div class="header__menu--bars">
+        <div class="header__menu--bars" id="bars">
           <i class="fas fa-bars fa-lg"></i>
         </div>
       </ul>
@@ -57,6 +58,6 @@
       </div>
     </div>   
     <%= yield %>
-    <%= javascript_pack_tag 'main' %>
+    <%# <%= javascript_pack_tag 'main' %>
   </body>
 </html>
