@@ -48,7 +48,13 @@
         </div>
       </ul>
     </div>
-    <div id="side-menu"><div>
+    <div class="side--menu">
+      <div class="side--menu--top">
+        <div class="hide-btn">
+          <i class="fas fa-times fa-lg"></i>
+        </div>
+      </div>
+    </div>   
     <%= yield %>
     <%= javascript_pack_tag 'main' %>
   </body>

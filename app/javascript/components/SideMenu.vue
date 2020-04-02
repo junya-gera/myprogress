@@ -4,26 +4,18 @@
       <div class="hide-btn">
         <i class="fas fa-times fa-lg"></i>
       </div>
-
     </div>
   </div>
 </template>
 
 
 <script>
-// import { BarsMenu } from "../packs/main"
 export default {
   data() {
     return {
       open: false
     }
   }
-  // created(){
-  //   // created / mountedでMountEventをlistenさせて、modalを開く
-  //   BarsMenu.$on("openMenu", () => {
-  //     this.open = !this.open // openのboolean値をtrueにする
-  //   })
-  // }
 }
 </script>
 
@@ -47,7 +39,7 @@ export default {
     margin-right: 30px;
   }
   .menu-open{
-    left: -33%;
+    right: -33%;
     transition: .4s;
   }
 </style>
