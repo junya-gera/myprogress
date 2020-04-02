@@ -2,43 +2,64 @@
 <html>
   <head>
     <title>Myprogress</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <div class="header">
-    <ul class="header__menus">
+  <p>jQuery稼働テスト(未稼働)</p>
 
-      <li class="header__menu">
-        <i class="fas fa-puzzle-piece fa-lg"></i>
-        <%= link_to "毎日頑張る犬", root_path, class: "header__menu--link" %>
-      </li>
-      <li class="header__menu">
-        <i class="fas fa-users fa-lg"></i>
-        <%# <%= link_to "ユーザー一覧", users_path, class: "header__menu--link" %> %>
-      </li>
-      <li class="header__menu">
-        <i class="fas fa-search fa-lg"></i>
-        <%# <%= link_to "ユーザー検索", root_path, class: "header__menu--link" %> %>
-      </li>
-      <%# <% if user_signed_in? %> %>
+    <div class="header">
+      <ul class="header__menus">
+
         <li class="header__menu">
-          <i class="fas fa-sign-out-alt fa-lg"></i>
-          <%# <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__menu--link" %> %>
+          <i class="fas fa-dog fa-lg"></i>
+          <%= link_to "毎日頑張る犬", root_path, class: "header__menu--link" %>
         </li>
-        <li class="header__menu myname">
-          <i class="fas fa-user fa-lg"></i>
-          <%# <%= link_to current_user.name, root_path, class: "header__menu--link" %> %>
+        <li class="header__menu">
+          <i class="fas fa-users fa-lg"></i>
+          <%= link_to "ユーザー一覧", "#", class: "header__menu--link" %>
         </li>
-      <%# <% end %> %>
-
-</ul>
-</div>
+        <li class="header__menu">
+          <i class="fas fa-search fa-lg"></i>
+          <%= link_to "ユーザー検索", "#", class: "header__menu--link" %>
+        </li>
+        <% if user_signed_in? %>
+          <li class="header__menu myname">
+            <i class="fas fa-user fa-lg"></i>
+            <%= link_to current_user.name, root_path, class: "header__menu--link" %>
+          </li>
+           <li class="header__menu">
+            <i class="fas fa-sign-out-alt"></i>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__menu--link" %>
+          </li>
+        <% else %>
+          <li class="header__menu">
+            <i class="fas fa-sign-in-alt"></i>
+            <%= link_to "ログイン", new_user_session_path, class: "header__menu--link" %>
+          </li>
+          <li class="header__menu">
+            <i class="fas fa-walking"></i>
+            <%= link_to "新規登録", new_user_registration_path, class: "header__menu--link" %>
+          </li>
+        <% end %>
+        <div class="header__menu--bars" id="bars">
+          <i class="fas fa-bars fa-lg"></i>
+        </div>
+      </ul>
+    </div>
+    <div class="side--menu">
+      <div class="side--menu--top">
+        <div class="hide-btn">
+          <i class="fas fa-times fa-lg"></i>
+        </div>
+      </div>
+    </div>   
     <%= yield %>
-    <%= javascript_pack_tag 'main' %>
+    <%# <%= javascript_pack_tag 'main' %>
   </body>
 </html>

@@ -1,2 +1,13 @@
+@import url('https://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
+ 
+body {
+    font-family: "Noto Sans Japanese";
+    font-weight: bold;
+    overflow-x: hidden;
+}
+
 @import "header";
 @import "reset";
+@import "users/sign_in";
+@import "font-awesome-sprockets";
+@import "font-awesome";

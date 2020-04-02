@@ -1,5 +1,12 @@
+@media screen and (max-width: 959px) {
+  .header__menu{
+    display: none;
+  }
+}
+
+
 .header {
-  background-color: #00E0FF;
+  background-color: #f3d1f4;
   height: 65px;
   width: 100vw;
   position: fixed;
@@ -20,7 +27,7 @@
     }
     &--link:hover{
       transition: all 0.3s ease 0s;
-      border-bottom: 3px solid #0066FF;
+      border-bottom: 3px solid #98d6ea;
     }
   }
   .myname{
@@ -39,4 +46,40 @@
     width: calc(100vw - 200px);
     background-color: #fff;
   }
+}
+
+.side--menu{
+  position: absolute;
+  top: 0;
+  right: -33%;
+  z-index: 2;
+  height: 100vh;
+  width: 33%;
+  background-color: #f5fcc1;
+  margin-left: auto;
+  transition: .4s;
+}
+.side--menu--top{
+  height: 70px;
+  line-height: 70px;
+}
+.hide-btn{
+  text-align: right;
+  margin-right: 30px;
+}
+.header.menu-open .side--menu{
+  right: 0;
+}
+
+.header__menu--bars{
+  display: none;
+  margin-left: auto;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 959px) {
+.header__menu--bars{
+  display: block;
+}
 }

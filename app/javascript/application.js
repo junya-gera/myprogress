@@ -14,5 +14,8 @@
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
-console.log('Hello World from Webpacker')
+//= require rails-ujs
+//= require activestorage
+//= require turbolinks
+//= require jquery
+//= require_tree .
