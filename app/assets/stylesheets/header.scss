@@ -71,3 +71,16 @@
   right: -33%;
   transition: .4s;
 }
+
+.header__menu--bars{
+  display: none;
+  margin-left: auto;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 959px) {
+.header__menu--bars{
+  display: block;
+}
+}
